@@ -17,6 +17,7 @@
     <!-- 子工程引用，创建子项目后在此添加即可 -->
     <modules>
         <module>spring-security-study</module>
+        <module>spring-security-jwt-study</module>
     </modules>
 
 </project>
