@@ -116,7 +116,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.authorizeRequests()
         // 不需要权限即可访问的 URL；#permitAll()：允许访问的URL
         .antMatchers("/login.html", "/login", "invalidSession.html", "/kaptcha"
-                , "/smsCode/*", "/sms/login", "/refreshToken", "/redisCacheCode").permitAll()
+                , "/smsCode/*", "/sms/login", "/refreshToken", "/redisCacheCode", "/hello").permitAll()
         // 首页无需权限验证，只要登录即可
         .antMatchers("/index").authenticated()
         // 自定义验证，根据url效验
