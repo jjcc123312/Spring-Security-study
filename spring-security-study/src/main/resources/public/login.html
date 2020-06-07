@@ -36,6 +36,20 @@
         kaptchaImg.onclick = function(){
             kaptchaImg.src = "/kaptcha?" + Math.floor(Math.random() * 100)
         }
+
+        $.ajax({
+            url: 'http://localhost:8090/hello',
+            type: "GET",
+            xhrFields: {
+                withCredentials: true    //允许发送Cookie信息
+            },
+            success: function (data) {
+                alert("跨域请求配置成功")
+            },
+            error: function (data) {
+                alert("跨域请求配置失败")
+            }
+        })
     }
 
     function login() {
